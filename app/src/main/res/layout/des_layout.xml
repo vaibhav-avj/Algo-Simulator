@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#052440">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="130dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
+        android:text="DES Algorithm"
+        android:textAlignment="center"
+        android:textColor="#00897B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/msgText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/msgText"
+        android:layout_width="376dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="Enter Your Message"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textColorHint="#392D2D"
+        app:layout_constraintBottom_toTopOf="@+id/secretKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearBt" />
+
+    <EditText
+        android:id="@+id/encText"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/border"
+        android:enabled="false"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textColorHint="#392D2D"
+        app:layout_constraintBottom_toTopOf="@+id/copyBt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/secretKey"
+        android:layout_width="376dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="34dp"
+        android:background="@drawable/border"
+        android:enabled="false"
+
+        android:ems="10"
+        android:hint="Your Key Here"
+        android:inputType="textMultiLine|number"
+        android:textColor="#000000"
+        android:textColorHint="#392D2D"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/msgText" />
+
+    <EditText
+        android:id="@+id/decText"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:background="@drawable/border"
+        android:enabled="false"
+
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textColorHint="#392D2D"
+        app:layout_constraintBottom_toTopOf="@+id/Decrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Encrypt"
+        app:layout_constraintVertical_bias="0.747" />
+
+    <Button
+        android:id="@+id/copyBt"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#1F7B87"
+        android:text="Copy"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/Encrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encText" />
+
+    <Button
+        android:id="@+id/clearBt"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#1F7B87"
+        android:text="Clear"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/msgText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Encrypt"
+        android:layout_width="129dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="53dp"
+        android:backgroundTint="#1F7B87"
+        android:text="Encrypt"
+        app:layout_constraintBottom_toTopOf="@+id/decText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/copyBt"
+        app:layout_constraintTop_toBottomOf="@+id/encText" />
+
+    <Button
+        android:id="@+id/Decrypt"
+        android:layout_width="124dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#1F7B87"
+        android:text="Decrypt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decText" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="175dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginBottom="5dp"
+        android:text="Your Decrypted Text"
+        android:textColor="#00897B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/decText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyBt" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="146dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="244dp"
+        android:text="Your Encrypted Text"
+        android:textColor="#00897B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/encText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secretKey" />
+
+    <Button
+        android:id="@+id/genKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="#1F7B87"
+        android:text="Generate Key"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/encText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/secretKey" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

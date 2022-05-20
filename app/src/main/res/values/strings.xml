@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Cryptography</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+<string name="about_us">
+    This application is made to simulate the Cryptography algorithms.
+    Algorithms used are RSA, Base64, DES.
+
+    In this application,
+    RSA algorithm is implemented as an encryption method using mathematical formula, which derives Public and Private Keys.
+    Base64 is implemented as an Image Encryption method, where image is encrypted into string.
+    DES algorithm shows the encryption and Decryption of String messages using a common public key.
+</string>
+
+    <string name="created_by"> Created by:
+        A Vaibhav Jain,
+        Arvind Choudhary,
+        Umang Doshi and
+        Suman Garai</string>
+</resources>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0E1FA"
+    tools:context=".rsaAlgo">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="150dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="131dp"
+        android:text="RSA Algorithm "
+        android:textAlignment="center"
+        android:textColor="#36346E"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="138dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="37dp"
+
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/genKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="144dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/genKey"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/genKey"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="113dp"
+        android:text="Generate Key Pair"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/resetKey"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="53dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genKey"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="10dp"
+        android:text="Public Key"
+        android:textColor="#36346E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="10dp"
+        android:text="Private Key"
+        android:textColor="#36346E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="410dp"
+        android:layout_height="260dp"
+        android:background="#5F82DA"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genKey">
+
+        <EditText
+            android:id="@+id/messageInt"
+            android:layout_width="304dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="7dp"
+            android:ems="10"
+            android:hint="Enter Message"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/pubicKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/pubicKey"
+            android:layout_width="304dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="76dp"
+            android:ems="10"
+            android:hint="Enter Public Key"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/encMsg"
+            android:layout_width="304dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="192dp"
+            android:layout_marginBottom="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:hint="Encrypted Message"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#22B8D3"
+            android:text="Encrypt"
+            app:layout_constraintBottom_toTopOf="@+id/encMsg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pubicKey" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="150dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="244dp"
+            android:layout_marginBottom="14dp"
+            android:text="Encryption"
+            android:textAlignment="center"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:typeface="normal"
+            app:layout_constraintBottom_toTopOf="@+id/messageInt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="410dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="528dp"
+        android:layout_marginBottom="25dp"
+        android:background="#2465C6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.771">
+
+        <EditText
+            android:id="@+id/encMsgTxt"
+            android:layout_width="308dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="Enter Encrypted Text"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/privateKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/privateKey"
+            android:layout_width="308dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Enter Private Key"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/encMsgTxt" />
+
+        <EditText
+            android:id="@+id/decMsg"
+            android:layout_width="308dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:hint="Decrypted Message"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#22B8D3"
+            android:text="Decrypt"
+            app:layout_constraintBottom_toTopOf="@+id/decMsg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/privateKey" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="150dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="244dp"
+            android:layout_marginBottom="10dp"
+            android:text="Decryption"
+            android:textAlignment="center"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:typeface="normal"
+            app:layout_constraintBottom_toTopOf="@+id/encMsgTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
